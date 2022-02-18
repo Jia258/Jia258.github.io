@@ -5,16 +5,16 @@
 <meta property="og:site_name" content="Jia258&#39;s Blog">
 <meta property="og:description" content="《数学建模算法与应用》第二章&lt;整数规划&gt;学习笔记">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://jia258.github.io/2022/02/18/IP/images/2022-02-18-19-24-05.png">
-<meta property="og:image" content="https://jia258.github.io/2022/02/18/IP/images/2022-02-18-19-27-04.png">
-<meta property="og:image" content="https://jia258.github.io/2022/02/18/IP/images/2022-02-18-19-56-45.png">
+<meta property="og:image" content="https://s2.loli.net/2022/02/18/iRop6P5EkM1jA9s.png">
+<meta property="og:image" content="https://s2.loli.net/2022/02/18/qO5ATYWgLK2wHGC.png">
+<meta property="og:image" content="https://s2.loli.net/2022/02/18/32OIeoGxLSHzbFk.png">
 <meta property="article:published_time" content="2022-02-18T09:30:45.493Z">
-<meta property="article:modified_time" content="2022-02-18T14:57:06.153Z">
+<meta property="article:modified_time" content="2022-02-18T15:10:15.753Z">
 <meta property="article:author" content="Jia">
 <meta property="article:tag" content="MATLAB">
 <meta property="article:tag" content="Integer Programming">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://jia258.github.io/2022/02/18/IP/images/2022-02-18-19-24-05.png"><title>整数规划 | Jia258's Blog</title><link ref="canonical" href="https://jia258.github.io/2022/02/18/IP/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script src="/live2d-widget-master/autoload.js"></script><script>var Stun = window.Stun || {};
+<meta name="twitter:image" content="https://s2.loli.net/2022/02/18/iRop6P5EkM1jA9s.png"><title>整数规划 | Jia258's Blog</title><link ref="canonical" href="https://jia258.github.io/2022/02/18/IP/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script src="/live2d-widget-master/autoload.js"></script><script>var Stun = window.Stun || {};
 var CONFIG = {
   root: '/',
   algolia: undefined,
@@ -48,11 +48,11 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.0.0">
       
 <ol>
 <li>整数规划中的定义<br>
-数学规划中的变量(部分或全部)限制为整数时，称为整数规划。若在线性规划模型中，变量限制为整数，则称为整数线性规划。目前所流行的求解整数规划的方法，往往只适用于整数线性规划。<mark>目前还没有一种方法能有效地求解一切整数规划。</mark></li>
+数学规划中的变量(部分或全部)限制为整数时，称为整数规划。若在线性规划模型中，变量限制为整数，则称为整数线性规划。目前所流行的求解整数规划的方法，往往只适用于整数线性规划。<strong>目前还没有一种方法能有效地求解一切整数规划。</strong></li>
 <li>整数规划的分类<br>
-如不加特殊说明，则一般指<mark>整数线性规划</mark>。整数线性规划模型大致可分为两类:<br>
-(1)变量全限制为整数时，称<mark>纯(完全)整数规划</mark>。<br>
-(2)变量部分限制为整数时，称<mark>混合整数规划</mark>。</li>
+如不加特殊说明，则一般指<strong>整数线性规划</strong>。整数线性规划模型大致可分为两类:<br>
+(1)变量全限制为整数时，称<strong>纯(完全)整数规划</strong>。<br>
+(2)变量部分限制为整数时，称<strong>混合整数规划</strong>。</li>
 <li>整数规划的特点<br>
 (1)原线性规划有最优解，当自变量限制为整数后，其整数规划解出现下述情况。
 <ul>
@@ -63,7 +63,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.0.0">
 </ul>
 </li>
 <li>求解方法分类<br>
-(1)<mark>分支定界法</mark>——可求纯或混合整数线性规划。<br>
+(1)<strong>分支定界法</strong>——可求纯或混合整数线性规划。<br>
 (2)割平面法——可求纯或混合整数线性规划。<br>
 (3)求解“0-1”整数规划。
 <ul>
@@ -83,8 +83,8 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.0.0">
         <h6 id="互相排斥的约束条件">
           <a href="#互相排斥的约束条件" class="heading-link"><i class="fas fa-link"></i></a><a class="markdownIt-Anchor" href="#互相排斥的约束条件"></a> 互相排斥的约束条件</h6>
       
-<p><img src="images/2022-02-18-19-24-05.png" alt=""><br>
-<img src="images/2022-02-18-19-27-04.png" alt=""></p>
+<p><img src="https://s2.loli.net/2022/02/18/iRop6P5EkM1jA9s.png" alt="2022-02-18-19-24-05.png"><br>
+<img src="https://s2.loli.net/2022/02/18/qO5ATYWgLK2wHGC.png" alt="2022-02-18-19-27-04.png"></p>
 
         <h6 id="关于固定费用的问题">
           <a href="#关于固定费用的问题" class="heading-link"><i class="fas fa-link"></i></a><a class="markdownIt-Anchor" href="#关于固定费用的问题"></a> 关于固定费用的问题</h6>
@@ -102,10 +102,10 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.0.0">
         <h5 id="整数线性规划的计算机求解">
           <a href="#整数线性规划的计算机求解" class="heading-link"><i class="fas fa-link"></i></a><a class="markdownIt-Anchor" href="#整数线性规划的计算机求解"></a> 整数线性规划的计算机求解</h5>
       
-<p>对于整数线性规划问题，也可以使用Matlab的<mark>intlinprog</mark>函数求解，但使用Matlab软件求解数学规划问题有一个缺陷，即必须把所有的决策变量化成<mark>一维决策向量</mark>，实际上对于多维变量的数学规划问题，用Matlab软件求解，需要做一个变量替换，把多维决策变量化成一维决策向量，变量替换后，约束条件很难写出。<br>
+<p>对于整数线性规划问题，也可以使用Matlab的<strong>intlinprog</strong>函数求解，但使用Matlab软件求解数学规划问题有一个缺陷，即必须把所有的决策变量化成<strong>一维决策向量</strong>，实际上对于多维变量的数学规划问题，用Matlab软件求解，需要做一个变量替换，把多维决策变量化成一维决策向量，变量替换后，约束条件很难写出。<br>
 MATLAB求解混合整数线性规划的命令为</p>
 <figure class="highlight matlab"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[x,fval] = intlinprog(f,intcon,A,b,Aeq,beq,lb,ub)</span><br></pre></td></tr></tbody></table></div></figure>
-<p><img src="images/2022-02-18-19-56-45.png" alt=""></p>
+<p><img src="https://s2.loli.net/2022/02/18/32OIeoGxLSHzbFk.png" alt="2022-02-18-19-56-45.png"></p>
 
         <h5 id="现代优化算法">
           <a href="#现代优化算法" class="heading-link"><i class="fas fa-link"></i></a><a class="markdownIt-Anchor" href="#现代优化算法"></a> 现代优化算法</h5>
